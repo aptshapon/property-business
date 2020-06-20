@@ -3,8 +3,8 @@ from django.db import models
 
 # choices
 property_type = (
-    ('S', 'sale'),
-    ('R', 'rent'),
+    ('sale', 'sale'),
+    ('rent', 'rent'),
 )
 
 class Property(models.Model):
