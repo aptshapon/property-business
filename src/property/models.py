@@ -15,6 +15,7 @@ class Property(models.Model):
     area = models.PositiveIntegerField()
     beds_number = models.PositiveIntegerField()
     garages_number = models.PositiveIntegerField()
+    baths_number = models.PositiveIntegerField()
     image = models.ImageField(upload_to='property', null=True)
 
     def __str__(self):

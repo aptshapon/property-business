@@ -12,5 +12,11 @@ def property_list(request):
     return render(request, template, context)
 
 
-def property_detail(request):
-    pass
+def property_detail(request, id):
+    property_detail = Property.objects.get(id=id)
+    template = 'property/detail.html'
+    context = {
+        'property_detail': property_detail
+    }
+
+    return render(request, template, context)
