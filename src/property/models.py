@@ -32,3 +32,12 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = 'Categories'
+
+
+class Reservation(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=50)
+    notes = models.TextField()
+
+    def __str__(self):
+        return self.name
