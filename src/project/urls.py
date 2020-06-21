@@ -24,6 +24,7 @@ urlpatterns = [
     path('property/', include('property.urls', namespace='property')),
     path('agents/', include('agents.urls', namespace='agents')),
     path('about/', include('about.urls', namespace='about')),
+    path('contact/', include('contact.urls', namespace='contact')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

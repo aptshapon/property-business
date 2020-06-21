@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'property',
     'agents',
     'about',
+    'contact',
 ]
 
 MIDDLEWARE = [
