@@ -1,16 +1,40 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import ContactForm
 from .models import ContactDetails
+from django.core.mail import send_mail as sm
+from django.core.mail import BadHeaderError
+from django.http import HttpResponse, HttpResponseRedirect
 
 
 def send_mail(request):
     contactdetails = ContactDetails.objects.last()
     template = 'contact.html'
+
+    if request.method == 'POST':
+        contact_form = ContactForm(request.POST)
+
+        if contact_form.is_valid():
+            subject = contact_form.cleaned_data['subject']
+            from_email = contact_form.cleaned_data['from_email']
+            message = contact_form.cleaned_data['message']
+
+            try:
+                sm(subject, message, from_email, ['test@gmail.com'])
+            except BadHeaderError:
+                return HttpResponse('invalid header')
+
+            return redirect('contact:success')
+
+    else:
+        contact_form = ContactForm()
+
     context = {
-        'contactdetails': contactdetails
+        'contactdetails': contactdetails,
+        'contact_form': contact_form,
     }
 
     return render(request, template, context)
 
 
 def success(request):
-    pass
+    return HttpResponse('Message sent successfully!')
