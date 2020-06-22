@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'about',
     'contact',
     'home',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +82,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hotel',
+        'NAME': 'properties',
         'USER': 'postgres',
         'PASSWORD': 'django',
         'HOST': '127.0.0.1',

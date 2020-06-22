@@ -30,18 +30,13 @@
                   <button class="btn btn-success" type="submit"><i class="icon-magnifying-glass t2"></i> Start Search</button>
                 </div>
               </form>
-              <p class="mb0 text-left"><small>A free HTML5 template by <a href="https://uicookies.com/">uicookies.com</a> under license <a href="https://uicookies.com/license">Creative Commons 3.0</a></small> </p>
+              <p class="mb0 text-left"><small>Find a suitable property for you and enjoy our service!</small> </p>
             </div>
-
           </div>
         </div>
       </div>
     </div>
-    <ul class="slides">
-      <li style="background-image: url(img/slider_1.jpg);" class="overlay"></li>
-      <li style="background-image: url(img/slider_4.jpg);" class="overlay"></li>
-      <li style="background-image: url(img/slider_2.jpg);" class="overlay"></li>
-    </ul>
+
   </section>
   <!-- END: slider  -->
 
@@ -56,7 +51,7 @@
       {% for category_list in category_list_home %}
 
         <div class="col-md-6 col-sm-6">
-          <a href="#" class="probootstrap-hover-overlay">
+          <a href="property/" class="probootstrap-hover-overlay">
             <img src="media/{{category_list.image}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
             <div class="probootstrap-text-overlay">
               <h3>{{category_list.category_name}}</h3>
@@ -76,7 +71,7 @@
     <div class="container text-center probootstrap-animate" data-animate-effect="fadeIn">
       <h2 class="heading">Best Home &amp; Properties</h2>
       <p class="sub-heading">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-      <p><a href="#" class="btn btn-primary mb10">Find out more</a></p>
+      <p><a href="property" class="btn btn-primary mb10">Find out more</a></p>
     </div>
   </section>
   <!-- END: section -->
@@ -96,7 +91,7 @@
               <img src="{{property.image.url}}" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
             </div>
             <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading"><a href="#">{{property}}</a></h2>
+              <h2 class="probootstrap-card-heading"><a href="{% url 'property:property_detail' property.id %}">{{property}}</a></h2>
               <div class="probootstrap-listing-location">
                 <i class="icon-location2"></i> <span>{{property.location}}</span>
               </div>
@@ -133,64 +128,8 @@
     </div>
   </section>
 
-  <section class="probootstrap-section">
-    <div class="container">
-      <div class="row heading">
-        <h2 class="mt0 mb50 text-center">Our Services</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
-          <div class="service text-center">
-            <div class="icon"><i class="icon-list2"></i></div>
-            <h2 class="heading">Property Listing</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
-          <div class="service text-center">
-            <div class="icon"><i class="icon-power-cord"></i></div>
-            <h2 class="heading">Property Management</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          </div>
-        </div>
-        <div class="clearfix visible-sm-block"></div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
-          <div class="service text-center">
-            <div class="icon"><i class="icon-price-tag2"></i></div>
-            <h2 class="heading">Renting Properties</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          </div>
-        </div>
-        <div class="clearfix visible-lg-block visible-md-block"></div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
-          <div class="service text-center">
-            <div class="icon"><i class="icon-direction"></i></div>
-            <h2 class="heading">Selling Properties</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          </div>
-        </div>
-        <div class="clearfix visible-sm-block"></div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
-          <div class="service text-center">
-            <div class="icon"><i class="icon-home3"></i></div>
-            <h2 class="heading">Brook A Property</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
-          <div class="service text-center">
-            <div class="icon"><i class="icon-magnifying-glass"></i></div>
-            <h2 class="heading">Search Property</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          </div>
-        </div>
-        <div class="clearfix visible-lg-block visible-md-block"></div>
-      </div>
-    </div>
-  </section>
 
-  <!-- END: section -->
-
+<!-- Our Agents -->
   <section class="probootstrap-section probootstrap-section-lighter">
     <div class="container">
       <div class="row heading">
