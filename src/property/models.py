@@ -17,6 +17,7 @@ class Property(models.Model):
     garages_number = models.PositiveIntegerField()
     baths_number = models.PositiveIntegerField()
     image = models.ImageField(upload_to='property', null=True)
+    location = models.CharField(max_length=50, null=True)
 
     def __str__(self):
         return self.name
