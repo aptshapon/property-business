@@ -24,7 +24,7 @@ SECRET_KEY = 'bj3^u@r)-lty*3-gx!vjd$@k3f!ce2=o!li@)23!te&#3i6dnv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['property-business.herokuapp.com']
+ALLOWED_HOSTS = ['property-business.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'dbproperty',
         'USER': 'shsheikh',
         'PASSWORD': 'mypassword',
-        'HOST': 'property-business.herokuapp.com',
+        'HOST': 'localhost',
         'PORT': '',
     }
 }
