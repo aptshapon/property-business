@@ -10,6 +10,9 @@ django = "*"
 psycopg2 = "*"
 django-bootstrap4 = "*"
 pillow = "*"
+requests = "*"
+gunicorn = "*"
+django-heroku = "*"
 
 [requires]
 python_version = "3.9"
