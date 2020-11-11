@@ -14,6 +14,7 @@ requests = "*"
 gunicorn = "*"
 django-heroku = "*"
 whitenoise = "*"
+dj-database-url = "*"
 
 [requires]
 python_version = "3.9"
