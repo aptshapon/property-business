@@ -85,8 +85,8 @@ DATABASES = {
         'NAME': 'dbproperty',
         'USER': 'shsheikh',
         'PASSWORD': 'mypassword',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'HOST': 'property-business.herokuapp.com',
+        'PORT': '',
     }
 }
 
